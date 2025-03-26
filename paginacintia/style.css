@@ -1,0 +1,244 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db; /* Azul para el banner superior */
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajusta según tu logo */
+    margin-right: 10px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    height: 20px; /* Ajusta según tus iconos */
+}
+
+/* Navegación */
+nav {
+    background-color: #2980b9; /* Azul más oscuro para la navegación */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Blanco para mejor contraste */
+    font-weight: bold;
+}
+
+nav ul li a img {
+    height: 20px; /* Tamaño del icono de búsqueda */
+}
+
+/* Sección principal - Hero */
+.hero {
+    background-image: url('imagenuniversidaddecordoba.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px); /* Fondo borroso */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Secciones */
+.sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.section img {
+    height: 20px; /* Tamaño de la flecha */
+}
+
+/* Colores específicos para cada sección */
+.quienes-somos {
+    background-color: #f1c40f; /* Mostaza */
+}
+
+.preguntas-respuestas {
+    background-color: #e74c3c; /* Coral */
+}
+
+.servicios-tic {
+    background-color: #9b59b6; /* Magenta */
+}
+
+.videotutoriales {
+    background-color: #34495e; /* Azul oscuro */
+}
+
+.certificados-digitales {
+    background-color: #1abc9c; /* Teal */
+}
+
+.contacto {
+    background-color: #16a085; /* Teal claro */
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    .sections {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+    /* Sección de Acceso a Plataformas */
+.platforms {
+    padding: 20px;
+    text-align: center;
+}
+
+.platforms h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.platform-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.platform {
+    text-align: center;
+}
+
+.platform img {
+    width: 100%;
+    max-width: 300px; /* Ajusta según las imágenes reales */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.platform p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.platform button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-pregrado {
+    background-color: #f1c40f; /* Amarillo */
+}
+
+.btn-postgrado {
+    background-color: #2980b9; /* Azul */
+}
+
+.btn-maraton {
+    background-color: #e74c3c; /* Rosa */
+}
+
+/* Pie de página */
+footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sections {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .platform-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+}
