@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UFC - Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: red;
+            padding: 20px;
+        }
+        nav {
+            background-color: darkred;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: red;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function cargarPagina(pagina) {
+            fetch(pagina).then(response => response.text()).then(data => {
+                document.getElementById("contenido").innerHTML = data;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la UFC</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="historia" onclick="cargarPagina('historia.html')"></a></li>
+            <h1>primera pagina by:Elias Talaigua</h1>
+            <a href="pagina-historia.html" target="_blank"> historia</a>
+            <li><a href="peleadores"onclick="cargarPagina('peleadores.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-peleadores.html" target="_blank"> peleadores</a>
+            <li><a href="eventos" onclick="cargarPagina('eventos.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-eventos.html" target="_blank">eventos</a>
+            <li><a href="campeones" onclick="cargarPagina('campeones.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-campeones.html" target="_blank">campeones</a>
+            <li><a href="reglas" onclick="cargarPagina('reglas.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-reglas.html" target="_blank">reglas</a>
+            <li><a href="mejores peleas" onclick="cargarPagina('mejores-pelea.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-mejores peleas.html" target="_blank">mejores peleas</a>
+            <li><a href="#" onclick="cargarPagina('entrenamiento.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-entranamiento.html" target="_blank">entranamiento</a>
+            <li><a href="datos curiosos" onclick="cargarPagina('datos-curiosos.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-datos curiosos.html" target="_blank">datos curiosos</a>
+            <li><a href="himno ufc" onclick="cargarPagina('himno-ufc.html')"></a></li>
+            <h1></h1>
+            <a href="pagina-himno ufc.html" target="_blank">himno ufc</a>
+        </ul>
+    </nav>
+    <main id="contenido">
+        <p>Explora el mundo de la UFC con nuestras páginas informativas.</p>
+        <img src="ufc-conor mcgregor.jpg" alt="UFC Fight Night">
+    </main>
+    <footer>
+        <p>&copy; 2025 UFC Fan Page</p>
+    </footer>
+</body>
+</html>
